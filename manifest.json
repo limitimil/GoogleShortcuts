@@ -9,7 +9,11 @@
         "http://*.google.com/search?*",
         "http://*.google.com/",
         "https://*.google.com/search?*",
-        "https://*.google.com/"
+        "https://*.google.com/",
+        "http://*.google.com.tw/search?*",
+        "http://*.google.com.tw/",
+        "https://*.google.com.tw/search?*",
+        "https://*.google.com.tw/"
       ],
       "js": ["jquery-1.7.2.min.js", "keymaster.min.js", "script.js"],
       "run_at": "document_start"
