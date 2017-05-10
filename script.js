@@ -50,7 +50,8 @@
         ev.stopPropagation();
     });
     key('/', function(ev) {
-        $('#gbqfq').focus();
+        $('#lst-ib').focus();
+        $('#lst-ib').select();
         ev.stopPropagation();
         ev.preventDefault();
     });
