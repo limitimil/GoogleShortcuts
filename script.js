@@ -69,4 +69,12 @@
         ev.stopPropagation();
         ev.preventDefault();
     });
+    $(function() {
+    	$('.hdtb-mitem').each(function(index){
+		console.log(index);
+		console.log($(this).text());
+	//	$(this).html($(this).text() + index);
+	});
+    });
+    	
 })();
