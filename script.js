@@ -21,6 +21,20 @@
         ev.stopPropagation();
         ev.preventDefault();
     });
+    
+    key('l', function(ev) {
+        var link = $('#pnnext');
+        location.href = link.attr('href');
+        ev.stopPropagation();
+        ev.preventDefault();
+    });
+    key('h', function(ev) {
+        var link = $('#pnprev');
+        location.href = link.attr('href');
+        ev.stopPropagation();
+        ev.preventDefault();
+    });
+    
 
     var node = null;
 
