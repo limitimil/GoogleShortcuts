@@ -6,8 +6,8 @@ Keyboard Shortcuts for Google Search
 * `⌘+Return`: Load selected result in new tab/window
 * `j`: Select next result
 * `k`: Select previous result
-* `h`: go to next search page
-* `l`: go to previous search page
+* `l`: go to next search page
+* `h`: go to previous search page
 * `0~9` : Switch among categories
 
 Installation
