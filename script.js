@@ -74,11 +74,19 @@
         ev.preventDefault();
     });
     $(function() {
-    	$('.hdtb-mitem').each(function(index){
-		console.log(index);
-		console.log($(this).text());
-	//	$(this).html($(this).text() + index);
+    	$('div.hdtb-mitem a').each(function(index){
+
+		$(this).html($(this).text() + '(' + (index+1).toString()+ ')');
+		var url = $(this).attr('href');
+		if (index < 9){
+			key((index+1).toString(), function(ev){
+				location.href = url
+				ev.stopPropagation();
+				ev.preventDefault();
+			});
+		}
 	});
+
     });
     	
 })();
