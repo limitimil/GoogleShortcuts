@@ -47,7 +47,7 @@
             var newNode = $('h3.r:nth(0) a');
             if (!node || (node.attr('href') != newNode.attr('href'))) {
                 idx = 0;
-                select();
+                select(true);
                 node = newNode;
             }
         });
@@ -87,6 +87,23 @@
 		}
 	});
 
+    });
+    $(function() {
+    	$('span.spell_orig').html( $('span.spell_orig').text() + '(press i to search origin keyword)<br>');
+	if (! $('a.spell_orig').text()){
+	    	$('span.spell').html( $('span.spell').text() + '(press i to search revised keyword)<br>');
+	}
+    });
+    key('i', function(ev) {
+        var link = $('a.spell_orig');
+	if (! link.length || ! link.text()){
+		link = $('a.spell');
+	}
+        if (link.length && link.text()){
+                location.href = link.attr('href');
+        }
+        ev.stopPropagation();
+        ev.preventDefault();
     });
     	
 })();
