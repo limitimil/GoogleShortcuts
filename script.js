@@ -3,8 +3,8 @@
 (function() {
     var idx = 0;
     var select = function(focus) {
-        $('h3.r a').css('background-color', 'inherit');
-        var link = $('h3.r:nth('+idx+') a');
+        $('div.r a').css('background-color', 'inherit');
+        var link = $('div.r:nth('+idx+') a');
         link.css('background-color', '#fcc');
         if (focus) {link.focus(); }
         return link;
@@ -44,7 +44,7 @@
 
     $(function() {
         document.getElementById('main').addEventListener("DOMSubtreeModified", function () {
-            var newNode = $('h3.r:nth(0) a');
+            var newNode = $('div.r:nth(0) a');
             if (!node || (node.attr('href') != newNode.attr('href'))) {
                 idx = 0;
                 select(true);
@@ -54,7 +54,7 @@
     });
 
     key('j', function(ev) {
-        if (idx < $('h3.r a').length-1) {
+        if (idx < $('div.r a').length-1) {
             idx++;
             select(true);
         }
