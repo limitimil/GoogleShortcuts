@@ -4,7 +4,7 @@
     var idx = 0;
     var select = function(focus) {
         $('div.r a').css('background-color', 'inherit');
-        var link = $('div.r:nth('+idx+') a:nth(0)');
+        var link = $('div.r:nth('+idx+') a');
         link.css('background-color', '#fcc');
         if (focus) {link.focus(); }
         return link;
@@ -44,7 +44,7 @@
 
     $(function() {
         document.getElementById('main').addEventListener("DOMSubtreeModified", function () {
-            var newNode = $('div.r:nth(0) a:nth(0)');
+            var newNode = $('div.r:nth(0) a');
             if (!node || (node.attr('href') != newNode.attr('href'))) {
                 idx = 0;
                 select(true);
