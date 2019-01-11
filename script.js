@@ -68,8 +68,7 @@
         ev.stopPropagation();
     });
     key('/', function(ev) {
-        $('#lst-ib').focus();
-        $('#lst-ib').select();
+        $('input.gLFyf.gsfi').select();
         ev.stopPropagation();
         ev.preventDefault();
     });
