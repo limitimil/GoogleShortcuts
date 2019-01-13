@@ -4,7 +4,7 @@
     var idx = 0;
     var select = function(focus) {
         $('div.r a').css('background-color', 'inherit');
-        var link = $('div.r:nth('+idx+') a');
+        var link = $('div.r:nth('+idx+') a:nth(0)');
         link.css('background-color', '#fcc');
         if (focus) {link.focus(); }
         return link;
